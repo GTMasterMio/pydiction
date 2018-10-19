@@ -29,9 +29,9 @@ Installation
 If you have Pathogen installed:
 
     cd ~/.vim/bundle
-    git clone https://github.com/rkulla/pydiction.git
+    git clone https://github.com/GTMasterMio/pydiction.git
 
-or use a plugin manager like Vimogen (https://github.com/rkulla/vimogen) to install and manage Pydiction and all of your plugins.
+or use a plugin manager like Vimogen (https://github.com/GTMasterMio/pydiction.git) to install and manage Pydiction and all of your plugins.
 
 Otherwise:
 
@@ -185,6 +185,9 @@ The -v option will just write the results to stdout (standard output) instead of
     $ ./pydiction.py -v datetime math
 
 If the backup file "complete-dict.last" doesn't exist in the current directory, pydiction.py will create it for you. You should always keep a backup of your last working dictionary in case anything goes wrong, as it can get tedious having to recreate the file from scratch.
+
+When you need to add some third-module or package, you can writh "import xxx" into the pydiction.py, and then run:
+	$ python pydiction.py xxx
 
 If complete-dict.last already exists, the script will ask if you want to overwrite your old backup with the new backup.
 
@@ -512,4 +515,5 @@ Further reading
 `:help popupmenu-keys`
 `:help iskeyword`
 
-http://docs.python.org/2/py-modindex.html
+https://docs.python.org/2/py-modindex.html
+https://docs.python.org/3/py-modindex.html

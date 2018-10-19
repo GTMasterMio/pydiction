@@ -2,6 +2,7 @@
 """
 
 pydiction.py 1.2.3 by Ryan Kulla (rkulla AT gmail DOT com).
+pydiction.py 1.3.0 by GTMasterMio (gtmastermio at gmail dot com).
 License: BSD.
 
 Description: Creates a Vim dictionary of Python module attributes for Vim's
@@ -23,14 +24,18 @@ Example: The following will append all the "time" and "math" modules'
 
 
 __author__ = "Ryan Kulla (rkulla AT gmail DOT com)"
-__version__ = "1.2.3"
+__version__ = "1.3.0"
 __copyright__ = "Copyright (c) 2003-2014 Ryan Kulla"
-
+# This is the gtmastermio's version 
 
 import os
 import sys
 import types
 import shutil
+# You can import the third-module in here when you need:
+# Example: 
+# import openpyxl
+# import ...
 
 
 # Path/filename of the vim dictionary file to write to:
@@ -176,6 +181,13 @@ def get_yesno(msg="[Y/n]?"):
     Takes an optional message to display, defaults to "[Y/n]?".
 
     """
+
+    # fix the python 2 or 3 when you pyenv is change:
+    if get_python_version() < (3,):
+        rawinput = raw_input
+    else:
+        rawinput = input
+    # fix end by GTMasterMio
     while True:
         answer = raw_input(msg)
         if answer == '':
