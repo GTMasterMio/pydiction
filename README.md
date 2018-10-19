@@ -187,6 +187,7 @@ The -v option will just write the results to stdout (standard output) instead of
 If the backup file "complete-dict.last" doesn't exist in the current directory, pydiction.py will create it for you. You should always keep a backup of your last working dictionary in case anything goes wrong, as it can get tedious having to recreate the file from scratch.
 
 When you need to add some third-module or package, you can writh "import xxx" into the pydiction.py, and then run:
+
 	$ python pydiction.py xxx
 
 If complete-dict.last already exists, the script will ask if you want to overwrite your old backup with the new backup.
