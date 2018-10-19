@@ -515,5 +515,5 @@ Further reading
 `:help popupmenu-keys`
 `:help iskeyword`
 
-https://docs.python.org/2/py-modindex.html
+https://docs.python.org/2/py-modindex.html\
 https://docs.python.org/3/py-modindex.html
